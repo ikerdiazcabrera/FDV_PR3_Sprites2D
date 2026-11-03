@@ -26,9 +26,9 @@ Pasos realizados con el spritesheet del guerrero:
 - En el **Sprite Editor** lo he cortado con *Slice → Grid By Cell Size* de **69 × 44 px**, el tamaño de cada frame.
 - He arrastrado uno de los sprites a la escena para crear el personaje.
 
-![Ejercicio 1 – Configuración del atlas en el Inspector](Media/Ej1.png)
+![Ejercicio 1 – Configuración del atlas en el Inspector](Assets/Media/Ej1.png)
 
-![Ejercicio 1 – Sprite del personaje en la escena](Media/Ej1.2.png)
+![Ejercicio 1 – Sprite del personaje en la escena](Assets/Media/Ej1.2.png)
 
 ---
 
@@ -43,9 +43,9 @@ Clips creados:
 | `PR3_Run` | Run | Personaje caminando |
 | `PR3_Cansado` | Crouch | Animación que se activa tras recorrer cierta distancia (Ej. 7) |
 
-![Ejercicio 2 – Clips y Animator Controller generados](Media/Ej2.png)
+![Ejercicio 2 – Clips y Animator Controller generados](Assets/Media/Ej2.png)
 
-![Ejercicio 2 – Animaciones en ejecución](Media/PR3_Ej2.gif)
+![Ejercicio 2 – Animaciones en ejecución](Assets/Media/PR3_Ej2.gif)
 
 ---
 
@@ -65,7 +65,7 @@ transform.Translate(movement * speed * Time.deltaTime);
   - si es negativo, mira a la izquierda (`flipX = true`);
   - si es 0, conserva la última orientación.
 
-![Ejercicios 3–6 – Movimiento y flip del sprite](Media/PR3_Ej3-6.gif)
+![Ejercicios 3–6 – Movimiento y flip del sprite](Assets/Media/PR3_Ej3-6.gif)
 
 ---
 
@@ -98,7 +98,7 @@ En la pestaña **Animator** se ha definido la máquina de estados con dos parám
 
 **Distancia acumulada frente a distancia desde el inicio:** el script también muestra `Vector3.Distance(firstPosition, transform.position)`. Si el personaje va y vuelve, esa distancia no crece, porque es el desplazamiento neto. La acumulada sí crece. Por eso, para medir "cuánto ha caminado", hay que sumar la distancia de cada frame.
 
-![Ejercicio 7 – Cambio de animación tras recorrer la distancia](Media/PR3_Ej7.gif)
+![Ejercicio 7 – Cambio de animación tras recorrer la distancia](Assets/Media/PR3_Ej7.gif)
 
 ---
 
@@ -127,7 +127,7 @@ Cualquier valor entre 22 y 44 deja el frame entre 1 y 2 unidades. Con 32 el fram
 
 *Nota:* en el proyecto final se usa **PPU 16** porque el tileset es de 16 × 16 px. Así un tile mide 1 unidad y el personaje mide 2 tiles de alto. Lo importante es que todos los assets compartan el mismo PPU.
 
-![Ejercicio 8 – Cambio de PPU y tamaño del personaje](Media/PR3_Ej8.gif)
+![Ejercicio 8 – Cambio de PPU y tamaño del personaje](Assets/Media/PR3_Ej8.gif)
 
 ---
 
@@ -141,7 +141,7 @@ No. Al hacer zoom se ve que los píxeles de un sprite son más grandes que los d
 **¿Qué regla deberían cumplir todos los sprites del juego?**
 Todos deben usar el **mismo PPU** y mantener la **escala a 1**, o como mucho escalas enteras. Así un píxel de cualquier sprite ocupa siempre el mismo espacio en pantalla. Además, todos deben usar **Filter Mode = Point** y **Compression = None**.
 
-![Ejercicio 9 – Comparación de sprites con distinto PPU](Media/PR3_Ej9.gif)
+![Ejercicio 9 – Comparación de sprites con distinto PPU](Assets/Media/PR3_Ej9.gif)
 
 ---
 
@@ -152,7 +152,7 @@ La Main Camera usa **Projection = Orthographic** con **Size = 5**. El *Size* es 
 **Cálculo previo:** altura visible = 2 × Size = 2 × 5 = **10 unidades**.
 **Comprobación:** se han colocado dos objetos en y = +5 e y = −5. Su centro queda justo en los bordes superior e inferior de la vista Game, así que solo se ve la mitad de cada uno. También se han puesto marcadores en los bordes laterales con `PR3_InfoCamara`.
 
-![Ejercicio 10 – Marcadores en los bordes de la vista de cámara](Media/Ej10.png)
+![Ejercicio 10 – Marcadores en los bordes de la vista de cámara](Assets/Media/Ej10.png)
 
 **Cambio de Size:**
 - **Size = 2:** se ven 4 u de alto, así que el personaje se ve **más grande** (2,5 veces respecto a Size 5).
